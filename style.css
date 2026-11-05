@@ -102,6 +102,7 @@ h2 { font-size: 13px; letter-spacing: 0.24em; text-transform: uppercase; color: 
 .facts dd { margin: 0; }
 @media (min-width: 760px) {
   .facts div { grid-template-columns: 130px 1fr; gap: 16px; }
+  .booking-hero { aspect-ratio: 2 / 1; object-position: center 30%; }
 }
 
 /* footer */
