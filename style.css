@@ -93,16 +93,19 @@ h2 { font-size: 13px; letter-spacing: 0.24em; text-transform: uppercase; color: 
 .note { color: var(--text-quiet); font-size: 14px; }
 
 /* booking page */
-.booking { padding: 8px 0; }
+/* Photo beside the text on wide screens, above it on phones; the photo keeps its own 3:2 crop. */
+.booking { display: grid; gap: 24px; padding: 16px 0 8px; }
 .booking > div > p { margin: 0 0 20px; max-width: 60ch; }
-.booking-hero { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); margin: 16px 0 24px; background: #000; }
+.booking-photo { width: 100%; height: auto; aspect-ratio: 3 / 2; border-radius: var(--radius); border: 1px solid var(--line); background: #000; }
 .facts { margin: 0 0 24px; display: grid; gap: 12px; }
 .facts div { display: grid; gap: 2px; }
 .facts dt { font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-quiet); }
 .facts dd { margin: 0; }
 @media (min-width: 760px) {
-  .facts div { grid-template-columns: 130px 1fr; gap: 16px; }
-  .booking-hero { aspect-ratio: 16 / 9; object-position: center 35%; }
+  .booking { grid-template-columns: minmax(240px, 42%) 1fr; gap: 32px; align-items: start; }
+}
+@media (min-width: 1000px) {
+  .facts div { grid-template-columns: 110px 1fr; gap: 16px; }
 }
 
 /* footer */
