@@ -92,6 +92,20 @@ h2 { font-size: 13px; letter-spacing: 0.24em; text-transform: uppercase; color: 
 .tracklist li::marker { color: var(--text-quiet); font-variant-numeric: tabular-nums; }
 .note { color: var(--text-quiet); font-size: 14px; }
 
+/* booking page */
+.booking { display: grid; gap: 28px; padding: 16px 0 8px; }
+.booking > div > p { margin: 0 0 20px; max-width: 60ch; }
+.booking-photo { width: 100%; max-width: 280px; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 40%; border-radius: var(--radius); border: 1px solid var(--line); }
+@media (max-width: 759px) { .booking-photo { max-width: 200px; } }
+.facts { margin: 0 0 24px; display: grid; gap: 12px; }
+.facts div { display: grid; gap: 2px; }
+.facts dt { font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-quiet); }
+.facts dd { margin: 0; }
+@media (min-width: 760px) {
+  .booking { grid-template-columns: 280px 1fr; align-items: start; }
+  .facts div { grid-template-columns: 130px 1fr; gap: 16px; }
+}
+
 /* footer */
 .site-foot { border-top: 1px solid var(--line); margin-top: 48px; padding: 24px 0 40px; color: var(--text-quiet); font-size: 14px; }
 .site-foot .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
